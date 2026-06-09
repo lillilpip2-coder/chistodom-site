@@ -63,7 +63,7 @@ body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.5;-
 /* REVIEWS */
 .reviews{padding:120px 0}
 .reviews__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.review{background:#fff;padding:40px 32px;border-radius:12px;border:1px solid #e5e5e5}
+.review{padding:40px 32px;border-radius:12px;border:1px solid #e5e5e5}
 .review__text{font-size:15px;line-height:1.8;margin-bottom:24px;font-style:italic}
 .review__author{font-size:13px;font-weight:600;color:#111}
 .review__author span{font-weight:400;color:#999}
