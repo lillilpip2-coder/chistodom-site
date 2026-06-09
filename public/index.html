@@ -4,230 +4,131 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ЧистоДом — Мытьё фасадов, химчистка мебели и ковров</title>
-  <meta name="description" content="Профессиональное мытьё фасадов, химчистка мебели и ковров. Быстро, качественно, доступно.">
-  <link rel="stylesheet" href="/css/style.css">
+  <meta name="description" content="Профессиональное мытьё фасадов, химчистка мебели и ковров.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
 <header class="header">
   <div class="container header__inner">
-    <a href="/" class="logo">
-      <span class="logo__icon">✦</span>
-      <span class="logo__text">ЧистоДом</span>
-    </a>
+    <a href="/" class="logo">ЧистоДом</a>
     <nav class="nav" id="nav">
       <a href="#services" class="nav__link">Услуги</a>
-      <a href="#about" class="nav__link">О нас</a>
-      <a href="#advantages" class="nav__link">Преимущества</a>
+      <a href="#process" class="nav__link">Как работаем</a>
       <a href="#reviews" class="nav__link">Отзывы</a>
-      <a href="#contact" class="nav__link">Контакты</a>
+      <a href="#contact" class="nav__link nav__link--cta">Оставить заявку</a>
     </nav>
-    <a href="tel:+79991234567" class="header__phone">+7 (999) 123-45-67</a>
     <button class="burger" id="burger" aria-label="Меню">
-      <span></span><span></span><span></span>
+      <span></span><span></span>
     </button>
   </div>
 </header>
 
+<main>
+
 <section class="hero">
-  <div class="container hero__inner">
-    <div class="hero__content">
-      <h1 class="hero__title">Идеальная чистота<br>вашего дома и офиса</h1>
-      <p class="hero__subtitle">Профессиональное мытьё фасадов, химчистка мебели и ковров с гарантией результата</p>
-      <div class="hero__actions">
-        <a href="#contact" class="btn btn--primary">Оставить заявку</a>
-        <a href="#services" class="btn btn--outline">Наши услуги</a>
-      </div>
-      <div class="hero__stats">
-        <div class="hero__stat">
-          <span class="hero__stat-number">1500+</span>
-          <span class="hero__stat-label">Довольных клиентов</span>
-        </div>
-        <div class="hero__stat">
-          <span class="hero__stat-number">8</span>
-          <span class="hero__stat-label">Лет опыта</span>
-        </div>
-        <div class="hero__stat">
-          <span class="hero__stat-number">24/7</span>
-          <span class="hero__stat-label">На связи</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero__visual">
-      <div class="hero__card hero__card--1">
-        <div class="hero__card-icon">🏠</div>
-        <div class="hero__card-text">Мытьё фасадов</div>
-      </div>
-      <div class="hero__card hero__card--2">
-        <div class="hero__card-icon">🛋️</div>
-        <div class="hero__card-text">Химчистка мебели</div>
-      </div>
-      <div class="hero__card hero__card--3">
-        <div class="hero__card-icon">🧹</div>
-        <div class="hero__card-text">Чистка ковров</div>
-      </div>
-    </div>
+  <div class="container">
+    <p class="hero__label">Чистота без компромиссов</p>
+    <h1 class="hero__title">Мы делаем<br><em>идеально</em></h1>
+    <p class="hero__text">Мытьё фасадов, химчистка мебели и ковров.<br>Быстро. Чисто. Гарантия.</p>
+    <a href="#contact" class="btn btn--dark">Обсудить проект</a>
+  </div>
+</section>
+
+<section class="marquee">
+  <div class="marquee__track">
+    <span>МЫТЬЁ ФАСАДОВ</span><span class="marquee__dot">●</span>
+    <span>ХИМЧИСТКА МЕБЕЛИ</span><span class="marquee__dot">●</span>
+    <span>ЧИСТКА КОВРОВ</span><span class="marquee__dot">●</span>
+    <span>МЫТЬЁ ФАСАДОВ</span><span class="marquee__dot">●</span>
+    <span>ХИМЧИСТКА МЕБЕЛИ</span><span class="marquee__dot">●</span>
+    <span>ЧИСТКА КОВРОВ</span><span class="marquee__dot">●</span>
+    <span>МЫТЬЁ ФАСАДОВ</span><span class="marquee__dot">●</span>
+    <span>ХИМЧИСТКА МЕБЕЛИ</span><span class="marquee__dot">●</span>
+    <span>ЧИСТКА КОВРОВ</span><span class="marquee__dot">●</span>
+    <span>МЫТЬЁ ФАСАДОВ</span><span class="marquee__dot">●</span>
+    <span>ХИМЧИСТКА МЕБЕЛИ</span><span class="marquee__dot">●</span>
+    <span>ЧИСТКА КОВРОВ</span><span class="marquee__dot">●</span>
   </div>
 </section>
 
 <section class="services" id="services">
   <div class="container">
-    <h2 class="section-title">Наши услуги</h2>
-    <p class="section-subtitle">Полный спектр услуг по чистке и уходу за вашим пространством</p>
     <div class="services__grid">
 
-      <div class="service-card">
-        <div class="service-card__icon">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="10" width="40" height="28" rx="3" stroke="currentColor" stroke-width="2.5"/><line x1="4" y1="18" x2="44" y2="18" stroke="currentColor" stroke-width="2.5"/><line x1="16" y1="10" x2="16" y2="38" stroke="currentColor" stroke-width="2.5"/><line x1="32" y1="10" x2="32" y2="38" stroke="currentColor" stroke-width="2.5"/></svg>
-        </div>
-        <h3 class="service-card__title">Мытьё фасадов</h3>
-        <p class="service-card__desc">Профессиональная мойка фасадов зданий любого типа. Удаляем грязь, налёт, плесень и следы атмосферных осадков. Используем безопасные моющие средства.</p>
-        <ul class="service-card__list">
-          <li>Фасады из стекла и металла</li>
-          <li>Каменные и кирпичные поверхности</li>
-          <li>Вентилируемые фасады</li>
-          <li>Высотные работы</li>
-        </ul>
-        <div class="service-card__price">от 150 ₽/м²</div>
-      </div>
+      <article class="service">
+        <span class="service__number">01</span>
+        <h2 class="service__title">Мытьё фасадов</h2>
+        <p class="service__desc">Удаляем грязь, налёт и плесень с фасадов любого типа. Стекло, металл, кирпич, камень.</p>
+        <div class="service__price">от 150 ₽<span>/м²</span></div>
+      </article>
 
-      <div class="service-card service-card--featured">
-        <div class="service-card__badge">Популярное</div>
-        <div class="service-card__icon">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="6" y="20" width="36" height="18" rx="4" stroke="currentColor" stroke-width="2.5"/><path d="M12 20V14a6 6 0 0 1 12 0v6" stroke="currentColor" stroke-width="2.5"/><rect x="14" y="26" width="20" height="6" rx="2" stroke="currentColor" stroke-width="2.5"/></svg>
-        </div>
-        <h3 class="service-card__title">Химчистка мебели</h3>
-        <p class="service-card__desc">Глубокая чистка мягкой мебели любого типа. Возвращаем первозданную чистоту и свежесть вашим диванам, креслам и стульям.</p>
-        <ul class="service-card__list">
-          <li>Диваны и кресла</li>
-          <li>Матрасы и подушки</li>
-          <li>Офисные кресла</li>
-          <li>Удаление пятен и запахов</li>
-        </ul>
-        <div class="service-card__price">от 800 ₽/место</div>
-      </div>
+      <article class="service">
+        <span class="service__number">02</span>
+        <h2 class="service__title">Химчистка мебели</h2>
+        <p class="service__desc">Глубокая чистка диванов, кресёл, матрасов. Удаляем пятна, запахи и аллергены.</p>
+        <div class="service__price">от 800 ₽<span>/место</span></div>
+      </article>
 
-      <div class="service-card">
-        <div class="service-card__icon">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="6" width="32" height="36" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M8 18h32" stroke="currentColor" stroke-width="2.5"/><path d="M16 6v12M24 6v12M32 6v12" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="30" r="6" stroke="currentColor" stroke-width="2.5"/></svg>
-        </div>
-        <h3 class="service-card__title">Чистка ковров</h3>
-        <p class="service-card__desc">Эффективная чистка ковров и ковровых покрытий. Удаляем глубокие загрязнения, пыль, аллергены и возвращаем яркость цветов.</p>
-        <ul class="service-card__list">
-          <li>Ковры любых размеров</li>
-          <li>Ковровые дорожки</li>
-          <li>Синтетика и натуральный ворс</li>
-          <li>Антибактериальная обработка</li>
-        </ul>
-        <div class="service-card__price">от 350 ₽/м²</div>
-      </div>
+      <article class="service">
+        <span class="service__number">03</span>
+        <h2 class="service__title">Чистка ковров</h2>
+        <p class="service__desc">Эффективная чистка ковров и ковровых покрытий. Возвращаем яркость цветов.</p>
+        <div class="service__price">от 350 ₽<span>/м²</span></div>
+      </article>
 
     </div>
   </div>
 </section>
 
-<section class="about" id="about">
-  <div class="container about__inner">
-    <div class="about__image">
-      <div class="about__image-placeholder">
-        <span>8+</span>
-        <p>лет опыта</p>
-      </div>
-    </div>
-    <div class="about__content">
-      <h2 class="section-title section-title--left">О компании ЧистоДом</h2>
-      <p class="about__text">Мы — команда профессионалов, которая уже более 8 лет занимается комплексной чисткой и уходом за жилыми и коммерческими объектами.</p>
-      <p class="about__text">Наша миссия — сделать ваше пространство идеально чистым, используя проверенные методы, современное оборудование и экологичные чистящие средства.</p>
-      <div class="about__features">
-        <div class="about__feature">
-          <span class="about__feature-icon">✓</span>
-          <span>Сертифицированные специалисты</span>
-        </div>
-        <div class="about__feature">
-          <span class="about__feature-icon">✓</span>
-          <span>Гарантия на все виды работ</span>
-        </div>
-        <div class="about__feature">
-          <span class="about__feature-icon">✓</span>
-          <span>Экологичные средства</span>
-        </div>
-        <div class="about__feature">
-          <span class="about__feature-icon">✓</span>
-          <span>Выезд в день обращения</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="advantages" id="advantages">
+<section class="numbers">
   <div class="container">
-    <h2 class="section-title">Почему выбирают нас</h2>
-    <p class="section-subtitle">Мы гарантируем качество на каждом этапе работы</p>
-    <div class="advantages__grid">
-      <div class="advantage">
-        <div class="advantage__number">01</div>
-        <h3 class="advantage__title">Быстрый выезд</h3>
-        <p class="advantage__text">Выезжаем в течение 24 часов после обращения. В экстренных случаях — в течение часа.</p>
+    <div class="numbers__grid">
+      <div class="number">
+        <span class="number__value">1500+</span>
+        <span class="number__label">клиентов</span>
       </div>
-      <div class="advantage">
-        <div class="advantage__number">02</div>
-        <h3 class="advantage__title">Прозрачные цены</h3>
-        <p class="advantage__text">Никаких скрытых доплат. Стоимость фиксируется до начала работ и не изменяется.</p>
+      <div class="number">
+        <span class="number__value">8</span>
+        <span class="number__label">лет опыта</span>
       </div>
-      <div class="advantage">
-        <div class="advantage__number">03</div>
-        <h3 class="advantage__title">Гарантия качества</h3>
-        <p class="advantage__text">Даём гарантию на все виды работ. Если результат не устроит — переделаем бесплатно.</p>
+      <div class="number">
+        <span class="number__value">24ч</span>
+        <span class="number__label">выезд на объект</span>
       </div>
-      <div class="advantage">
-        <div class="advantage__number">04</div>
-        <h3 class="advantage__title">Современное оборудование</h3>
-        <p class="advantage__text">Используем профессиональную технику Kärcher и современные чистящие системы.</p>
-      </div>
-      <div class="advantage">
-        <div class="advantage__number">05</div>
-        <h3 class="advantage__title">Безопасные составы</h3>
-        <p class="advantage__text">Работаем с экологичными и гипоаллергенными средствами, безопасными для людей и животных.</p>
-      </div>
-      <div class="advantage">
-        <div class="advantage__number">06</div>
-        <h3 class="advantage__title">Удобная оплата</h3>
-        <p class="advantage__text">Принимаем наличные, карты и переводы. Предоставляем скидки постоянным клиентам.</p>
+      <div class="number">
+        <span class="number__value">100%</span>
+        <span class="number__label">гарантия</span>
       </div>
     </div>
   </div>
 </section>
 
-<section class="process">
+<section class="process" id="process">
   <div class="container">
-    <h2 class="section-title">Как мы работаем</h2>
-    <p class="section-subtitle">Простой и прозрачный процесс от заявки до результата</p>
-    <div class="process__steps">
+    <h2 class="section-title">Как это работает</h2>
+    <div class="process__grid">
       <div class="process__step">
-        <div class="process__step-number">1</div>
-        <h3 class="process__step-title">Заявка</h3>
-        <p class="process__step-text">Оставьте заявку на сайте или позвоните нам. Мы уточним детали и подберём оптимальное решение.</p>
+        <span class="process__num">1</span>
+        <h3 class="process__title">Заявка</h3>
+        <p class="process__text">Оставьте заявку или позвоните. Уточним детали за 5 минут.</p>
       </div>
-      <div class="process__step-arrow">→</div>
       <div class="process__step">
-        <div class="process__step-number">2</div>
-        <h3 class="process__step-title">Осмотр</h3>
-        <p class="process__step-text">Наш специалист приедет, оценит объём работ и предоставит точный расчёт стоимости.</p>
+        <span class="process__num">2</span>
+        <h3 class="process__title">Осмотр</h3>
+        <p class="process__text">Приедем, оценим объём и назовём точную стоимость.</p>
       </div>
-      <div class="process__step-arrow">→</div>
       <div class="process__step">
-        <div class="process__step-number">3</div>
-        <h3 class="process__step-title">Работа</h3>
-        <p class="process__step-text">Выполним все работы в согласованные сроки с соблюдением технологий и стандартов.</p>
+        <span class="process__num">3</span>
+        <h3 class="process__title">Работа</h3>
+        <p class="process__text">Выполним всё в согласованные сроки. Чисто и аккуратно.</p>
       </div>
-      <div class="process__step-arrow">→</div>
       <div class="process__step">
-        <div class="process__step-number">4</div>
-        <h3 class="process__step-title">Результат</h3>
-        <p class="process__step-text">Принимайте работу, оценивайте результат. Гарантия на все виды выполненных работ.</p>
+        <span class="process__num">4</span>
+        <h3 class="process__title">Результат</h3>
+        <p class="process__text">Принимайте. Если не устроит — переделаем бесплатно.</p>
       </div>
     </div>
   </div>
@@ -235,156 +136,60 @@
 
 <section class="reviews" id="reviews">
   <div class="container">
-    <h2 class="section-title">Отзывы клиентов</h2>
-    <p class="section-subtitle">Более 1500 довольных клиентов по всей Москве и области</p>
+    <h2 class="section-title">Отзывы</h2>
     <div class="reviews__grid">
-      <div class="review">
-        <div class="review__stars">★★★★★</div>
-        <p class="review__text">«Заказывали мойку фасада 5-этажного здания. Ребята справились за два дня. Результат превзошёл ожидания — фасад как новый! Рекомендую.»</p>
-        <div class="review__author">
-          <div class="review__avatar">АС</div>
-          <div>
-            <div class="review__name">Алексей Смирнов</div>
-            <div class="review__role">Директор ООО «СтройГрупп»</div>
-          </div>
-        </div>
-      </div>
-      <div class="review">
-        <div class="review__stars">★★★★★</div>
-        <p class="review__text">«Химчистка дивана после ремонта — думала, уже не спасти. Но специалисты ЧистоДом вернули ему первозданный вид. Очень благодарна!»</p>
-        <div class="review__author">
-          <div class="review__avatar">ЕК</div>
-          <div>
-            <div class="review__name">Елена Козлова</div>
-            <div class="review__role">Частный клиент</div>
-          </div>
-        </div>
-      </div>
-      <div class="review">
-        <div class="review__stars">★★★★★</div>
-        <p class="review__text">«Чистили ковёр в офисе площадью 80 м². Удалили все пятна, ковёр стал как новый. Приятно удивлены качеством и скоростью работы.»</p>
-        <div class="review__author">
-          <div class="review__avatar">ДМ</div>
-          <div>
-            <div class="review__name">Дмитрий Морозов</div>
-            <div class="review__role">Управ директор «ОфисПлюс»</div>
-          </div>
-        </div>
-      </div>
+      <blockquote class="review">
+        <p class="review__text">«Заказывали мойку фасада 5-этажного здания. Ребята справились за два дня. Фасад как новый.»</p>
+        <footer class="review__author">Алексей Смирнов <span>— директор ООО «СтройГрупп»</span></footer>
+      </blockquote>
+      <blockquote class="review">
+        <p class="review__text">«Химчистка дивана после ремонта — думала, уже не спасти. Вернули первозданный вид.»</p>
+        <footer class="review__author">Елена Козлова <span>— частный клиент</span></footer>
+      </blockquote>
+      <blockquote class="review">
+        <p class="review__text">«Чистили ковёр 80 м² в офисе. Удалили все пятна. Приятно удивлены качеством.»</p>
+        <footer class="review__author">Дмитрий Морозов <span>— «ОфисПлюс»</span></footer>
+      </blockquote>
     </div>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="container cta__inner">
-    <h2 class="cta__title">Готовы сделать заказ?</h2>
-    <p class="cta__text">Оставьте заявку сейчас и получите скидку 15% на первую услугу</p>
-    <a href="#contact" class="btn btn--primary btn--large">Получить скидку</a>
   </div>
 </section>
 
 <section class="contact" id="contact">
-  <div class="container contact__inner">
-    <div class="contact__info">
-      <h2 class="section-title section-title--left">Свяжитесь с нами</h2>
-      <p class="contact__text">Оставьте заявку или свяжитесь с нами любым удобным способом. Мы ответим в течение 15 минут.</p>
-      <div class="contact__details">
-        <div class="contact__detail">
-          <span class="contact__detail-icon">📞</span>
-          <div>
-            <div class="contact__detail-label">Телефон</div>
-            <a href="tel:+79990000000" class="contact__detail-value">+7 (999) 000 00 00</a>
-          </div>
-        </div>
-        <div class="contact__detail">
-          <span class="contact__detail-icon">✉️</span>
-          <div>
-            <div class="contact__detail-label">Email</div>
-            <a href="mailto:info@chistodom.ru" class="contact__detail-value">info@chistodom.ru</a>
-          </div>
-        </div>
-        <div class="contact__detail">
-          <span class="contact__detail-icon">📍</span>
-          <div>
-            <div class="contact__detail-label">Адрес</div>
-            <span class="contact__detail-value">г. Москва, ул. Чистых прудов, д. 12</span>
-          </div>
-        </div>
-        <div class="contact__detail">
-          <span class="contact__detail-icon">⏰</span>
-          <div>
-            <div class="contact__detail-label">Режим работы</div>
-            <span class="contact__detail-value">Пн-Вс: 8:00 — 22:00</span>
-          </div>
+  <div class="container">
+    <div class="contact__inner">
+      <div class="contact__info">
+        <h2 class="contact__title">Давайте обсудим<br>ваш проект</h2>
+        <p class="contact__text">Оставьте заявку — перезвоним в течение 15 минут и ответим на все вопросы.</p>
+        <div class="contact__links">
+          <a href="tel:+79991234567" class="contact__link">+7 (999) 123-45-67</a>
+          <a href="mailto:info@chistodom.ru" class="contact__link">info@chistodom.ru</a>
+          <span class="contact__link">Пн-Вс: 8:00 — 22:00</span>
         </div>
       </div>
-    </div>
-    <form class="contact__form" id="contactForm">
-      <h3 class="contact__form-title">Оставить заявку</h3>
-      <div class="form-group">
-        <label for="name" class="form-label">Ваше имя</label>
-        <input type="text" id="name" name="name" class="form-input" placeholder="Иван Иванов" required>
-      </div>
-      <div class="form-group">
-        <label for="phone" class="form-label">Телефон</label>
-        <input type="tel" id="phone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
-      </div>
-      <div class="form-group">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" id="email" name="email" class="form-input" placeholder="email@example.com">
-      </div>
-      <div class="form-group">
-        <label for="service" class="form-label">Интересующая услуга</label>
-        <select id="service" name="service" class="form-input">
-          <option value="">Выберите услугу</option>
+      <form class="form" id="contactForm" novalidate>
+        <div class="form__row">
+          <input type="text" name="name" class="form__input" placeholder="Ваше имя" required minlength="2" maxlength="100" autocomplete="name">
+          <input type="tel" name="phone" class="form__input" placeholder="Телефон" required maxlength="18" autocomplete="tel" inputmode="tel">
+        </div>
+        <select name="service" class="form__input" aria-label="Выберите услугу">
+          <option value="">Какая услуга?</option>
           <option value="facade">Мытьё фасадов</option>
           <option value="furniture">Химчистка мебели</option>
           <option value="carpet">Чистка ковров</option>
-          <option value="other">Другое</option>
         </select>
-      </div>
-      <div class="form-group">
-        <label for="message" class="form-label">Сообщение</label>
-        <textarea id="message" name="message" class="form-input form-textarea" placeholder="Опишите вашу задачу..." rows="4"></textarea>
-      </div>
-      <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
-      <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
-    </form>
+        <textarea name="message" class="form__input form__textarea" placeholder="Опишите задачу (необязательно)" rows="3" maxlength="500"></textarea>
+        <button type="submit" class="btn btn--dark btn--full">Отправить заявку</button>
+      </form>
+    </div>
   </div>
 </section>
 
+</main>
+
 <footer class="footer">
   <div class="container footer__inner">
-    <div class="footer__brand">
-      <a href="/" class="logo logo--footer">
-        <span class="logo__icon">✦</span>
-        <span class="logo__text">ЧистоДом</span>
-      </a>
-      <p class="footer__desc">Профессиональная чистка фасадов, мебели и ковров. Качество, которому доверяют.</p>
-    </div>
-    <div class="footer__links">
-      <h4 class="footer__heading">Услуги</h4>
-      <a href="#services" class="footer__link">Мытьё фасадов</a>
-      <a href="#services" class="footer__link">Химчистка мебели</a>
-      <a href="#services" class="footer__link">Чистка ковров</a>
-    </div>
-    <div class="footer__links">
-      <h4 class="footer__heading">Компания</h4>
-      <a href="#about" class="footer__link">О нас</a>
-      <a href="#reviews" class="footer__link">Отзывы</a>
-      <a href="#contact" class="footer__link">Контакты</a>
-    </div>
-    <div class="footer__links">
-      <h4 class="footer__heading">Контакты</h4>
-      <a href="tel:+79991234567" class="footer__link">+7 (999) 123-45-67</a>
-      <a href="mailto:info@chistodom.ru" class="footer__link">info@chistodom.ru</a>
-      <span class="footer__link">г. Москва</span>
-    </div>
-  </div>
-  <div class="footer__bottom">
-    <div class="container">
-      <p>© 2024 ЧистоДом. Все права защищены.</p>
-    </div>
+    <span class="footer__logo">ЧистоДом</span>
+    <span class="footer__copy">© 2024 Все права защищены</span>
   </div>
 </footer>
 

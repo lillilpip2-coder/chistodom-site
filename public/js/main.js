@@ -1,39 +1,67 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const header = document.querySelector('.header');
   const burger = document.getElementById('burger');
   const nav = document.getElementById('nav');
-  const contactForm = document.getElementById('contactForm');
+  const form = document.getElementById('contactForm');
   const toast = document.getElementById('toast');
 
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 20);
-  });
+  let toastTimer = null;
+  let isSubmitting = false;
 
   burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
     nav.classList.toggle('open');
   });
 
-  document.querySelectorAll('.nav__link').forEach(link => {
-    link.addEventListener('click', () => nav.classList.remove('open'));
+  nav.querySelectorAll('.nav__link').forEach(link => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('active');
+      nav.classList.remove('open');
+    });
+  });
+
+  document.addEventListener('click', e => {
+    if (!nav.contains(e.target) && !burger.contains(e.target)) {
+      burger.classList.remove('active');
+      nav.classList.remove('open');
+    }
   });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
+    anchor.addEventListener('click', e => {
       e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        const offset = 80;
-        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      const id = anchor.getAttribute('href');
+      if (!id || id === '#') return;
+      const el = document.querySelector(id);
+      if (el) {
+        const offset = 72;
+        const top = el.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top, behavior: 'smooth' });
       }
     });
   });
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
+  if (form) {
+    form.addEventListener('submit', async e => {
       e.preventDefault();
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData);
+      if (isSubmitting) return;
+
+      const data = Object.fromEntries(new FormData(form));
+
+      if (!data.name || data.name.trim().length < 2) {
+        showToast('Введите имя (минимум 2 символа)');
+        return;
+      }
+
+      if (!data.phone || data.phone.replace(/\D/g, '').length < 10) {
+        showToast('Введите корректный номер телефона');
+        return;
+      }
+
+      isSubmitting = true;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Отправка...';
+      submitBtn.disabled = true;
 
       try {
         const res = await fetch('/api/contact', {
@@ -41,49 +69,57 @@ document.addEventListener('DOMContentLoaded', () => {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
         });
+
+        const contentType = res.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+          throw new Error('Unexpected response');
+        }
+
         const result = await res.json();
+
+        if (!res.ok) {
+          showToast(result.message || 'Ошибка отправки');
+          return;
+        }
+
         showToast(result.message || 'Заявка отправлена!');
-        contactForm.reset();
-      } catch {
-        showToast('Ошибка отправки. Попробуйте позже.');
+        form.reset();
+      } catch (err) {
+        showToast('Ошибка сети. Попробуйте позже.');
+      } finally {
+        isSubmitting = false;
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
       }
     });
   }
 
-  function showToast(message) {
-    toast.textContent = message;
+  function showToast(msg) {
+    if (toastTimer) clearTimeout(toastTimer);
+    toast.textContent = msg;
     toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 4000);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 4000);
   }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.service-card, .advantage, .review, .process__step').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(24px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-  });
-
-  const phoneInput = document.getElementById('phone');
+  const phoneInput = form?.querySelector('input[type="tel"]');
   if (phoneInput) {
-    phoneInput.addEventListener('input', (e) => {
-      let value = e.target.value.replace(/\D/g, '');
-      if (value.length > 0) {
-        if (value[0] === '7' || value[0] === '8') value = value.substring(1);
-        let formatted = '+7';
-        if (value.length > 0) formatted += ' (' + value.substring(0, 3);
-        if (value.length >= 3) formatted += ') ' + value.substring(3, 6);
-        if (value.length >= 6) formatted += '-' + value.substring(6, 8);
-        if (value.length >= 8) formatted += '-' + value.substring(8, 10);
-        e.target.value = formatted;
+    phoneInput.addEventListener('input', e => {
+      let v = e.target.value.replace(/\D/g, '');
+      if (v.length === 0) { e.target.value = ''; return; }
+      if (v[0] === '8') v = '7' + v.substring(1);
+      if (v[0] !== '7') v = '7' + v;
+      if (v.length > 11) v = v.substring(0, 11);
+      let f = '+7';
+      if (v.length > 1) f += ' (' + v.substring(1, 4);
+      if (v.length >= 4) f += ') ' + v.substring(4, 7);
+      if (v.length >= 7) f += '-' + v.substring(7, 9);
+      if (v.length >= 9) f += '-' + v.substring(9, 11);
+      e.target.value = f;
+    });
+
+    phoneInput.addEventListener('keydown', e => {
+      if (e.key === 'Backspace' && e.target.value === '+7 (') {
+        e.target.value = '';
       }
     });
   }
