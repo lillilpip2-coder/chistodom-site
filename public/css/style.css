@@ -60,22 +60,11 @@ body{font-family:'Inter',sans-serif;color:#111;line-height:1.5;-webkit-font-smoo
 
 /* WHY */
 .why{padding:100px 0;background:#f5f5f5}
-.why__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.why__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
 .why__item{display:flex;gap:16px;align-items:flex-start}
 .why__icon{width:32px;height:32px;border-radius:50%;background:#2c7be5;color:#fff;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .why__title{font-size:15px;font-weight:700;margin-bottom:4px}
 .why__text{font-size:14px;color:#666;line-height:1.6}
-
-/* CALCULATOR */
-.calculator{padding:100px 0;background:#f5f5f5}
-.calculator__inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.calculator__field{margin-bottom:20px}
-.calculator__label{display:block;font-size:14px;font-weight:600;margin-bottom:8px}
-.calculator__btn{width:100%}
-.calculator__result{background:#fff;border-radius:16px;padding:40px;text-align:center}
-.calculator__result-title{font-size:14px;color:#999;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
-.calculator__price{font-size:40px;font-weight:900;letter-spacing:-2px;margin-bottom:16px}
-.calculator__result-note{font-size:13px;color:#999}
 
 /* CONTACT */
 .contact{padding:120px 0;background:#fff}

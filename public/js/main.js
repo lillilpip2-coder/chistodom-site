@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
   let toastTimer = null;
   let isSubmitting = false;
 
+  function showToast(msg) {
+    if (toastTimer) clearTimeout(toastTimer);
+    toast.textContent = msg;
+    toast.classList.add('show');
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 4000);
+  }
+
   burger.addEventListener('click', () => {
     burger.classList.toggle('active');
     nav.classList.toggle('open');
@@ -94,13 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function showToast(msg) {
-    if (toastTimer) clearTimeout(toastTimer);
-    toast.textContent = msg;
-    toast.classList.add('show');
-    toastTimer = setTimeout(() => toast.classList.remove('show'), 4000);
-  }
-
   const phoneInput = form?.querySelector('input[type="tel"]');
   if (phoneInput) {
     phoneInput.addEventListener('input', e => {
@@ -132,37 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Backspace' && e.target.value === '+7 (') {
         e.target.value = '';
       }
-    });
-  }
-
-  const calcBtn = document.getElementById('calcBtn');
-  const calcService = document.getElementById('calcService');
-  const calcArea = document.getElementById('calcArea');
-  const calcPrice = document.getElementById('calcPrice');
-
-  if (calcBtn && calcService && calcArea && calcPrice) {
-    const prices = { atmo: [50, 70], vysoly: [150, 220], hydro: [180, 250] };
-
-    function calcUpdate() {
-      const area = parseFloat(calcArea.value);
-      if (!area || area <= 0) {
-        calcPrice.textContent = '—';
-        return;
-      }
-      const [min, max] = prices[calcService.value];
-      const minTotal = area * min;
-      const maxTotal = area * max;
-      const fmt = n => n.toLocaleString('ru-RU') + ' ₽';
-      calcPrice.textContent = minTotal === maxTotal
-        ? fmt(minTotal)
-        : fmt(minTotal) + ' – ' + fmt(maxTotal);
-    }
-
-    calcBtn.addEventListener('click', calcUpdate);
-    calcArea.addEventListener('input', calcUpdate);
-    calcService.addEventListener('change', calcUpdate);
-    calcArea.addEventListener('keydown', e => {
-      if (e.key === 'Enter') calcUpdate();
     });
   }
 });
