@@ -58,13 +58,21 @@ body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.5;-
 .number__value{display:block;font-size:48px;font-weight:900;letter-spacing:-2px}
 .number__label{font-size:13px;color:#999;text-transform:uppercase;letter-spacing:1px;margin-top:4px}
 
+/* SHOWCASE */
+.showcase{padding:80px 0;background:#fafafa}
+.showcase__img{width:100%;border-radius:16px;display:block}
+.showcase__caption{text-align:center;font-size:14px;color:#999;margin-top:16px}
+
 /* PROCESS */
 .process{padding:120px 0;background:#fff}
 .section-title{font-size:40px;font-weight:800;letter-spacing:-1.5px;margin-bottom:64px}
-.process__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:48px}
+.process__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:48px;margin-bottom:64px}
 .process__num{font-size:48px;font-weight:900;color:#e5e5e5;display:block;margin-bottom:16px}
 .process__title{font-size:16px;font-weight:700;margin-bottom:8px}
 .process__text{font-size:14px;color:#666;line-height:1.7}
+.process__visual{position:relative;max-width:600px;margin:0 auto}
+.process__img{width:100%;border-radius:16px;display:block}
+.process__img-label{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.7);color:#fff;font-size:12px;font-weight:600;letter-spacing:2px;padding:8px 20px;border-radius:100px}
 
 /* REVIEWS */
 .reviews{padding:120px 0;background:#fff}
@@ -107,16 +115,13 @@ body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.5;-
   .burger{display:block}
   .hero__title{letter-spacing:-2px}
   .services__grid{grid-template-columns:1fr}
-  .numbers__grid{grid-template-columns:repeat(2,1fr);gap:40px}
   .process__grid{grid-template-columns:1fr 1fr;gap:32px}
-  .reviews__grid{grid-template-columns:1fr}
   .contact__inner{grid-template-columns:1fr;gap:48px}
   .contact__title{font-size:36px}
   .form__row{grid-template-columns:1fr}
 }
 @media(max-width:480px){
   .hero__title{font-size:48px;letter-spacing:-1.5px}
-  .number__value{font-size:36px}
   .process__grid{grid-template-columns:1fr}
   .section-title{font-size:32px;margin-bottom:40px}
 }
