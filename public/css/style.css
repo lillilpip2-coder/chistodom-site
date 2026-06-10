@@ -52,6 +52,13 @@ main{position:relative;z-index:1}
 .service__price{font-size:28px;font-weight:800;letter-spacing:-1px}
 .service__price span{font-size:14px;font-weight:500;color:#999}
 
+/* GALLERY */
+.gallery{padding:80px 0;background:#fff}
+.gallery__grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.gallery__item{position:relative;border-radius:16px;overflow:hidden}
+.gallery__img{width:100%;height:320px;object-fit:cover;display:block}
+.gallery__label{position:absolute;bottom:16px;left:16px;background:rgba(0,0,0,.6);color:#fff;font-size:13px;font-weight:600;padding:6px 16px;border-radius:100px;backdrop-filter:blur(4px)}
+
 /* PROCESS */
 .process{padding:120px 0;background:#fff}
 .process__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:48px}
@@ -92,6 +99,8 @@ main{position:relative;z-index:1}
   .burger{display:block}
   .hero__title{letter-spacing:-2px}
   .services__grid{grid-template-columns:1fr}
+  .gallery__grid{grid-template-columns:1fr}
+  .gallery__img{height:240px}
   .process__grid{grid-template-columns:1fr 1fr;gap:32px}
   .contact__inner{grid-template-columns:1fr;gap:48px}
   .contact__title{font-size:36px}
