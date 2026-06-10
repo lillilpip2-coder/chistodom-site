@@ -134,4 +134,24 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  const calcBtn = document.getElementById('calcBtn');
+  if (calcBtn) {
+    calcBtn.addEventListener('click', () => {
+      const service = document.getElementById('calcService').value;
+      const area = parseFloat(document.getElementById('calcArea').value);
+      if (!area || area <= 0) {
+        showToast('Введите площадь фасада');
+        return;
+      }
+      const prices = { atmo: [50, 70], vysoly: [150, 220], hydro: [180, 250] };
+      const [min, max] = prices[service];
+      const minTotal = Math.round(area * min / 1000) * 1000;
+      const maxTotal = Math.round(area * max / 1000) * 1000;
+      document.getElementById('calcPrice').textContent =
+        minTotal === maxTotal
+          ? minTotal.toLocaleString('ru-RU') + ' ₽'
+          : minTotal.toLocaleString('ru-RU') + ' – ' + maxTotal.toLocaleString('ru-RU') + ' ₽';
+    });
+  }
 });

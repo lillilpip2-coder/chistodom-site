@@ -147,6 +147,34 @@
   </div>
 </section>
 
+<section class="calculator" id="calculator">
+  <div class="container">
+    <h2 class="section-title">Калькулятор стоимости</h2>
+    <div class="calculator__inner">
+      <div class="calculator__form">
+        <div class="calculator__field">
+          <label class="calculator__label">Тип услуги</label>
+          <select class="form__input" id="calcService">
+            <option value="atmo">Атмосферная грязь (50–70 ₽/м²)</option>
+            <option value="vysoly">Высолы (150–220 ₽/м²)</option>
+            <option value="hydro">Гидрофобизатор (180–250 ₽/м²)</option>
+          </select>
+        </div>
+        <div class="calculator__field">
+          <label class="calculator__label">Площадь фасада (м²)</label>
+          <input type="number" class="form__input" id="calcArea" placeholder="Например, 150" min="1" max="9999">
+        </div>
+        <button type="button" class="btn btn--dark calculator__btn" id="calcBtn">Рассчитать</button>
+      </div>
+      <div class="calculator__result" id="calcResult">
+        <p class="calculator__result-title">Ориентировочная стоимость</p>
+        <div class="calculator__price" id="calcPrice">—</div>
+        <p class="calculator__result-note">Точная стоимость — после бесплатного осмотра</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="contact" id="contact">
   <div class="container">
     <div class="contact__inner">
