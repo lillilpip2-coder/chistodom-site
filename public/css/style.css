@@ -18,13 +18,16 @@ body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.5;-
 .burger.active span:last-child{bottom:50%;transform:rotate(-45deg)}
 
 /* HERO */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;background-size:cover;background-position:center}
-.hero__overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.3) 100%)}
+.hero{position:relative;height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero__overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.3) 100%)}
 .hero__content{position:relative;z-index:1}
 .hero__label{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.6);margin-bottom:24px}
 .hero__title{font-size:clamp(56px,10vw,120px);font-weight:900;letter-spacing:-3px;line-height:.95;margin-bottom:32px;color:#fff}
 .hero__title em{font-style:italic;color:rgba(255,255,255,.6)}
-.hero__text{font-size:18px;color:rgba(255,255,255,.8);margin-bottom:48px;max-width:400px;line-height:1.7}
+.hero__text{font-size:18px;color:rgba(255,255,255,.85);margin-bottom:48px;max-width:400px;line-height:1.7}
+.btn--light{background:#fff;color:#111}
+.btn--light:hover{background:#f0f0f0}
 
 /* MARQUEE */
 .marquee{padding:20px 0;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;overflow:hidden}
@@ -39,7 +42,8 @@ body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.5;-
 .btn--full{width:100%;padding:16px;border-radius:12px}
 
 /* SERVICES */
-.services{padding:120px 0}
+.services{padding:100px 0;background:#fff}
+.section-title{font-size:36px;font-weight:800;letter-spacing:-1px;margin-bottom:48px}
 .services__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#e5e5e5}
 .service{background:#fff;padding:48px 36px}
 .service__number{font-size:12px;font-weight:700;color:#bbb;letter-spacing:1px}
@@ -49,13 +53,13 @@ body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.5;-
 .service__price span{font-size:14px;font-weight:500;color:#999}
 
 /* NUMBERS */
-.numbers{padding:80px 0;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5}
+.numbers{padding:80px 0;background:#fff;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5}
 .numbers__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
 .number__value{display:block;font-size:48px;font-weight:900;letter-spacing:-2px}
 .number__label{font-size:13px;color:#999;text-transform:uppercase;letter-spacing:1px;margin-top:4px}
 
 /* PROCESS */
-.process{padding:120px 0}
+.process{padding:120px 0;background:#fff}
 .section-title{font-size:40px;font-weight:800;letter-spacing:-1.5px;margin-bottom:64px}
 .process__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:48px}
 .process__num{font-size:48px;font-weight:900;color:#e5e5e5;display:block;margin-bottom:16px}
@@ -63,7 +67,7 @@ body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.5;-
 .process__text{font-size:14px;color:#666;line-height:1.7}
 
 /* REVIEWS */
-.reviews{padding:120px 0}
+.reviews{padding:120px 0;background:#fff}
 .reviews__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
 .review{padding:40px 32px;border-radius:12px;border:1px solid #e5e5e5}
 .review__text{font-size:15px;line-height:1.8;margin-bottom:24px;font-style:italic}
@@ -71,7 +75,7 @@ body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.5;-
 .review__author span{font-weight:400;color:#999}
 
 /* CONTACT */
-.contact{padding:120px 0}
+.contact{padding:120px 0;background:#fff}
 .contact__inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
 .contact__title{font-size:48px;font-weight:900;letter-spacing:-2px;line-height:1.1;margin-bottom:16px}
 .contact__text{font-size:16px;color:#666;margin-bottom:32px;line-height:1.7}
@@ -111,7 +115,6 @@ body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.5;-
   .form__row{grid-template-columns:1fr}
 }
 @media(max-width:480px){
-  .hero{min-height:auto;padding:140px 0 80px}
   .hero__title{font-size:48px;letter-spacing:-1.5px}
   .number__value{font-size:36px}
   .process__grid{grid-template-columns:1fr}
