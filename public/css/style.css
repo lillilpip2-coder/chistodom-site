@@ -58,6 +58,14 @@ body{font-family:'Inter',sans-serif;color:#111;line-height:1.5;-webkit-font-smoo
 .process__title{font-size:16px;font-weight:700;margin-bottom:8px}
 .process__text{font-size:14px;color:#666;line-height:1.7}
 
+/* WHY */
+.why{padding:100px 0;background:#f5f5f5}
+.why__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.why__item{display:flex;gap:16px;align-items:flex-start}
+.why__icon{width:32px;height:32px;border-radius:50%;background:#2c7be5;color:#fff;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.why__title{font-size:15px;font-weight:700;margin-bottom:4px}
+.why__text{font-size:14px;color:#666;line-height:1.6}
+
 /* CONTACT */
 .contact{padding:120px 0;background:#fff}
 .contact__inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
@@ -92,6 +100,7 @@ body{font-family:'Inter',sans-serif;color:#111;line-height:1.5;-webkit-font-smoo
   .hero__title{letter-spacing:-2px}
   .services__grid{grid-template-columns:1fr}
   .process__grid{grid-template-columns:1fr 1fr;gap:32px}
+  .why__grid{grid-template-columns:1fr}
   .contact__inner{grid-template-columns:1fr;gap:48px}
   .contact__title{font-size:36px}
   .form__row{grid-template-columns:1fr}
