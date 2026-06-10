@@ -134,5 +134,5 @@ body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.5;-
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important}
   html{scroll-behavior:auto}
-  .marquee__track{animation:none !important}
+  .marquee__track{animation:scroll 60s linear infinite}
 }
