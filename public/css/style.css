@@ -4,25 +4,27 @@ body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.5;-
 .container{max-width:1120px;margin:0 auto;padding:0 24px}
 
 /* HEADER */
-.header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(20px)}
+.header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,0,0,.4);backdrop-filter:blur(20px)}
 .header__inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-size:20px;font-weight:800;text-decoration:none;color:#111;letter-spacing:-.5px}
+.logo{font-size:20px;font-weight:800;text-decoration:none;color:#fff;letter-spacing:-.5px}
 .nav{display:flex;align-items:center;gap:32px}
-.nav__link{text-decoration:none;color:#111;font-size:14px;font-weight:500}
-.nav__link--cta{background:#111;color:#fff;padding:8px 20px;border-radius:100px;font-weight:600}
+.nav__link{text-decoration:none;color:rgba(255,255,255,.85);font-size:14px;font-weight:500}
+.nav__link--cta{background:#fff;color:#111;padding:8px 20px;border-radius:100px;font-weight:600}
 .burger{display:none;background:none;border:none;cursor:pointer;width:32px;height:20px;position:relative}
-.burger span{position:absolute;left:0;width:100%;height:2px;background:#111;transition:all .3s}
+.burger span{position:absolute;left:0;width:100%;height:2px;background:#fff;transition:all .3s}
 .burger span:first-child{top:0}
 .burger span:last-child{bottom:0}
 .burger.active span:first-child{top:50%;transform:rotate(45deg)}
 .burger.active span:last-child{bottom:50%;transform:rotate(-45deg)}
 
 /* HERO */
-.hero{padding:180px 0 100px}
-.hero__label{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:#999;margin-bottom:24px}
-.hero__title{font-size:clamp(56px,10vw,120px);font-weight:900;letter-spacing:-3px;line-height:.95;margin-bottom:32px}
-.hero__title em{font-style:italic;color:#999}
-.hero__text{font-size:18px;color:#666;margin-bottom:48px;max-width:400px;line-height:1.7}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background-size:cover;background-position:center}
+.hero__overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.3) 100%)}
+.hero__content{position:relative;z-index:1}
+.hero__label{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.6);margin-bottom:24px}
+.hero__title{font-size:clamp(56px,10vw,120px);font-weight:900;letter-spacing:-3px;line-height:.95;margin-bottom:32px;color:#fff}
+.hero__title em{font-style:italic;color:rgba(255,255,255,.6)}
+.hero__text{font-size:18px;color:rgba(255,255,255,.8);margin-bottom:48px;max-width:400px;line-height:1.7}
 
 /* MARQUEE */
 .marquee{padding:20px 0;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;overflow:hidden}
@@ -93,8 +95,11 @@ body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.5;-
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .nav{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:24px;gap:16px;border-bottom:1px solid #e5e5e5}
+  .header{background:rgba(0,0,0,.6)}
+  .nav{display:none;position:absolute;top:64px;left:0;right:0;background:#111;flex-direction:column;padding:24px;gap:16px;border-bottom:1px solid #333}
   .nav.open{display:flex}
+  .nav__link{color:rgba(255,255,255,.8)}
+  .nav__link--cta{color:#111}
   .burger{display:block}
   .hero__title{letter-spacing:-2px}
   .services__grid{grid-template-columns:1fr}
@@ -106,7 +111,7 @@ body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.5;-
   .form__row{grid-template-columns:1fr}
 }
 @media(max-width:480px){
-  .hero{padding:140px 0 80px}
+  .hero{min-height:auto;padding:140px 0 80px}
   .hero__title{font-size:48px;letter-spacing:-1.5px}
   .number__value{font-size:36px}
   .process__grid{grid-template-columns:1fr}
@@ -117,7 +122,7 @@ body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.5;-
 :focus-visible{outline:2px solid #111;outline-offset:2px}
 .btn:focus-visible{outline:2px solid #111;outline-offset:3px}
 .form__input:focus-visible{outline:none;border-color:#111}
-.nav__link:focus-visible{outline:2px solid #111;outline-offset:4px;border-radius:4px}
+.nav__link:focus-visible{outline:2px solid #fff;outline-offset:4px;border-radius:4px}
 
 /* SCROLL MARGIN */
 [id]{scroll-margin-top:80px}
