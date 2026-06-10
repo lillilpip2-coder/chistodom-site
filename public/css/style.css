@@ -54,8 +54,7 @@ main{position:relative;z-index:1}
 
 /* PROCESS */
 .process{padding:120px 0;background:#fff}
-.section-title{font-size:40px;font-weight:800;letter-spacing:-1.5px;margin-bottom:64px}
-.process__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:48px;margin-bottom:64px}
+.process__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:48px}
 .process__num{font-size:48px;font-weight:900;color:#e5e5e5;display:block;margin-bottom:16px}
 .process__title{font-size:16px;font-weight:700;margin-bottom:8px}
 .process__text{font-size:14px;color:#666;line-height:1.7}

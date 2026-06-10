@@ -55,7 +55,7 @@ app.post('/api/contact', contactLimiter, (req, res) => {
   res.json({ success: true, message: 'Заявка принята! Мы свяжемся с вами в ближайшее время.' });
 });
 
-app.get('/{*splat}', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
