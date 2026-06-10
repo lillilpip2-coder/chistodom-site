@@ -104,17 +104,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const phoneInput = form?.querySelector('input[type="tel"]');
   if (phoneInput) {
     phoneInput.addEventListener('input', e => {
-      let v = e.target.value.replace(/\D/g, '');
-      if (v.length === 0) { e.target.value = ''; return; }
-      if (v[0] === '8') v = '7' + v.substring(1);
-      if (v[0] !== '7') v = '7' + v;
-      if (v.length > 11) v = v.substring(0, 11);
+      const sel = e.target.selectionStart;
+      const digitsBefore = e.target.value.slice(0, sel).replace(/\D/g, '').length;
+
+      let d = e.target.value.replace(/\D/g, '');
+      if (!d) { e.target.value = ''; return; }
+      if (d[0] === '8') d = '7' + d.slice(1);
+      if (d[0] !== '7') d = '7' + d;
+      d = d.slice(0, 11);
+
       let f = '+7';
-      if (v.length > 1) f += ' (' + v.substring(1, 4);
-      if (v.length >= 4) f += ') ' + v.substring(4, 7);
-      if (v.length >= 7) f += '-' + v.substring(7, 9);
-      if (v.length >= 9) f += '-' + v.substring(9, 11);
+      if (d.length > 1) f += ' (' + d.slice(1, 4);
+      if (d.length > 4) f += ') ' + d.slice(4, 7);
+      if (d.length > 7) f += '-' + d.slice(7, 9);
+      if (d.length > 9) f += '-' + d.slice(9, 11);
       e.target.value = f;
+
+      let pos = 0;
+      for (let i = 0, dc = 0; i < f.length && dc < digitsBefore; i++) {
+        if (/\d/.test(f[i])) dc++;
+        pos = i + 1;
+      }
+      e.target.setSelectionRange(pos, pos);
     });
 
     phoneInput.addEventListener('keydown', e => {
