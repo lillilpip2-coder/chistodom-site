@@ -1,6 +1,6 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;color:#111;background:#fff;line-height:1.5;-webkit-font-smoothing:antialiased;background-image:url('/images/house.jpg');background-size:cover;background-position:center;background-attachment:fixed}
+body{font-family:'Inter',sans-serif;color:#111;line-height:1.5;-webkit-font-smoothing:antialiased;background-color:#fff;background-image:url('/images/house.jpg');background-size:cover;background-position:center;background-attachment:fixed}
 .container{max-width:1120px;margin:0 auto;padding:0 24px}
 
 /* HEADER */
