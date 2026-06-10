@@ -136,22 +136,33 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const calcBtn = document.getElementById('calcBtn');
-  if (calcBtn) {
-    calcBtn.addEventListener('click', () => {
-      const service = document.getElementById('calcService').value;
-      const area = parseFloat(document.getElementById('calcArea').value);
+  const calcService = document.getElementById('calcService');
+  const calcArea = document.getElementById('calcArea');
+  const calcPrice = document.getElementById('calcPrice');
+
+  if (calcBtn && calcService && calcArea && calcPrice) {
+    const prices = { atmo: [50, 70], vysoly: [150, 220], hydro: [180, 250] };
+
+    function calcUpdate() {
+      const area = parseFloat(calcArea.value);
       if (!area || area <= 0) {
-        showToast('Введите площадь фасада');
+        calcPrice.textContent = '—';
         return;
       }
-      const prices = { atmo: [50, 70], vysoly: [150, 220], hydro: [180, 250] };
-      const [min, max] = prices[service];
-      const minTotal = Math.round(area * min / 1000) * 1000;
-      const maxTotal = Math.round(area * max / 1000) * 1000;
-      document.getElementById('calcPrice').textContent =
-        minTotal === maxTotal
-          ? minTotal.toLocaleString('ru-RU') + ' ₽'
-          : minTotal.toLocaleString('ru-RU') + ' – ' + maxTotal.toLocaleString('ru-RU') + ' ₽';
+      const [min, max] = prices[calcService.value];
+      const minTotal = area * min;
+      const maxTotal = area * max;
+      const fmt = n => n.toLocaleString('ru-RU') + ' ₽';
+      calcPrice.textContent = minTotal === maxTotal
+        ? fmt(minTotal)
+        : fmt(minTotal) + ' – ' + fmt(maxTotal);
+    }
+
+    calcBtn.addEventListener('click', calcUpdate);
+    calcArea.addEventListener('input', calcUpdate);
+    calcService.addEventListener('change', calcUpdate);
+    calcArea.addEventListener('keydown', e => {
+      if (e.key === 'Enter') calcUpdate();
     });
   }
 });
