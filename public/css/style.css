@@ -9,7 +9,6 @@ main{position:relative;z-index:1}
 .header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,0,0,.4);backdrop-filter:blur(20px)}
 .header__inner{display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{font-size:20px;font-weight:800;text-decoration:none;color:#fff;letter-spacing:-.5px;display:flex;align-items:center;gap:8px}
-.logo__icon{width:24px;height:24px;display:block}
 .nav{display:flex;align-items:center;gap:32px}
 .nav__link{text-decoration:none;color:rgba(255,255,255,.85);font-size:14px;font-weight:500}
 .nav__link--cta{background:#fff;color:#111;padding:8px 20px;border-radius:100px;font-weight:600}
