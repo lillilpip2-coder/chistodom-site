@@ -30,9 +30,9 @@ body{font-family:'Inter',sans-serif;color:#111;line-height:1.5;-webkit-font-smoo
 
 /* MARQUEE */
 .marquee{padding:20px 0;border-top:1px solid rgba(255,255,255,.3);border-bottom:1px solid rgba(255,255,255,.3);overflow:hidden;background:rgba(0,0,0,.4)}
-.marquee__track{display:flex;width:max-content;animation:scroll 30s linear infinite}
-.marquee__track span{font-size:12px;font-weight:700;letter-spacing:4px;color:#fff;flex-shrink:0;text-transform:uppercase;padding:0 24px}
-.marquee__dot{color:rgba(255,255,255,.4);font-size:6px;display:flex;align-items:center;flex-shrink:0;padding:0 8px}
+.marquee__track{display:flex;width:max-content;animation:scroll 30s linear infinite;will-change:transform;-webkit-animation:scroll 30s linear infinite}
+.marquee__track span{font-size:12px;font-weight:700;letter-spacing:4px;color:#fff;flex-shrink:0;text-transform:uppercase;padding:0 24px;white-space:nowrap}
+.marquee__dot{color:rgba(255,255,255,.4);font-size:6px;display:flex;align-items:center;flex-shrink:0;padding:0 8px;white-space:nowrap}
 @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* BUTTONS */
@@ -124,6 +124,6 @@ body{font-family:'Inter',sans-serif;color:#111;line-height:1.5;-webkit-font-smoo
 
 /* REDUCED MOTION */
 @media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important}
+  .hero,.why,.process,.services,.contact,.footer{animation:none !important;transition-duration:0.01ms !important}
   html{scroll-behavior:auto}
 }
