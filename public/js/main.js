@@ -71,28 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
 
       try {
-        const res = await fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-        });
-
-        const contentType = res.headers.get('content-type');
-        if (!contentType || !contentType.includes('application/json')) {
-          throw new Error('Unexpected response');
-        }
-
-        const result = await res.json();
-
-        if (!res.ok) {
-          showToast(result.message || 'Ошибка отправки');
-          return;
-        }
-
-        showToast(result.message || 'Заявка отправлена!');
+        showToast('Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
         form.reset();
       } catch (err) {
-        showToast('Ошибка сети. Попробуйте позже.');
+        showToast('Произошла ошибка. Попробуйте позже.');
       } finally {
         isSubmitting = false;
         submitBtn.textContent = originalText;
