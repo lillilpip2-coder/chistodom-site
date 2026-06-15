@@ -160,16 +160,19 @@
           <span class="contact__link">Пн-Вс: круглосуточно</span>
         </div>
       </div>
-      <form class="form" id="contactForm" novalidate>
+      <form class="form" id="contactForm" action="https://formsubmit.co/Vlad.bychkov.2025@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Новая заявка с сайта ЧистоДом">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://lillilpip2-coder.github.io/chistodom-site/">
         <div class="form__row">
           <input type="text" name="name" class="form__input" placeholder="Ваше имя" required minlength="2" maxlength="100" autocomplete="name">
           <input type="tel" name="phone" class="form__input" placeholder="Телефон" required maxlength="18" autocomplete="tel" inputmode="tel">
         </div>
         <select name="service" class="form__input" aria-label="Выберите услугу">
           <option value="">Какая услуга?</option>
-          <option value="atmo">Атмосферная грязь</option>
-          <option value="vysoly">Высолы</option>
-          <option value="hydro">Гидрофобизатор</option>
+          <option value="Атмосферная грязь">Атмосферная грязь</option>
+          <option value="Высолы">Высолы</option>
+          <option value="Гидрофобизатор">Гидрофобизатор</option>
         </select>
         <textarea name="message" class="form__input form__textarea" placeholder="Опишите задачу (необязательно)" rows="3" maxlength="500"></textarea>
         <button type="submit" class="btn btn--dark btn--full">Отправить заявку</button>

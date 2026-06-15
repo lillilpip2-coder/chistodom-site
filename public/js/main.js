@@ -49,35 +49,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (form) {
     form.addEventListener('submit', e => {
-      e.preventDefault();
       if (isSubmitting) return;
 
       const data = Object.fromEntries(new FormData(form));
 
       if (!data.name || data.name.trim().length < 2) {
+        e.preventDefault();
         showToast('Введите имя (минимум 2 символа)');
         return;
       }
 
       if (!data.phone || data.phone.replace(/\D/g, '').length < 10) {
+        e.preventDefault();
         showToast('Введите корректный номер телефона');
         return;
       }
 
       isSubmitting = true;
       const submitBtn = form.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
       submitBtn.textContent = 'Отправка...';
       submitBtn.disabled = true;
 
       showToast('Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
-      form.reset();
-
-      setTimeout(() => {
-        isSubmitting = false;
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }, 2000);
     });
   }
 
