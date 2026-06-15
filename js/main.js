@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   if (form) {
-    form.addEventListener('submit', async e => {
+    form.addEventListener('submit', e => {
       e.preventDefault();
       if (isSubmitting) return;
 
