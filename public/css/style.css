@@ -106,7 +106,7 @@ select.form__input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:/
   .contact__inner{grid-template-columns:1fr;gap:48px}
   .contact__title{font-size:36px}
   .form__row{grid-template-columns:1fr}
-  .marquee__track{animation:scroll 60s linear infinite}
+  .marquee__track{-webkit-animation:scroll 60s linear infinite;animation:scroll 60s linear infinite}
 }
 @media(max-width:480px){
   .hero__title{font-size:48px;letter-spacing:-1.5px}

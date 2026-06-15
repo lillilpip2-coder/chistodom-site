@@ -73,9 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
       showToast('Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
       form.reset();
 
-      isSubmitting = false;
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
+      setTimeout(() => {
+        isSubmitting = false;
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }, 2000);
     });
   }
 
