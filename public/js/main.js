@@ -70,16 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.textContent = 'Отправка...';
       submitBtn.disabled = true;
 
-      try {
-        showToast('Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
-        form.reset();
-      } catch (err) {
-        showToast('Произошла ошибка. Попробуйте позже.');
-      } finally {
-        isSubmitting = false;
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }
+      showToast('Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+      form.reset();
+
+      isSubmitting = false;
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
     });
   }
 
