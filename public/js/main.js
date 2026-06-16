@@ -107,4 +107,49 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  const drone = document.getElementById('drone');
+  if (drone) {
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let droneX = mouseX;
+    let droneY = mouseY;
+    const ease = 0.08;
+
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animateDrone() {
+      droneX += (mouseX - droneX) * ease;
+      droneY += (mouseY - droneY) * ease;
+      drone.style.left = droneX + 'px';
+      drone.style.top = droneY + 'px';
+      requestAnimationFrame(animateDrone);
+    }
+    animateDrone();
+
+    const whiteSections = document.querySelectorAll('.services, .process, .why, .contact');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          drone.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    whiteSections.forEach(s => observer.observe(s));
+
+    const hero = document.querySelector('.hero');
+    if (hero) {
+      const heroObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            drone.classList.remove('visible');
+          }
+        });
+      }, { threshold: 0.5 });
+      heroObserver.observe(hero);
+    }
+  }
 });

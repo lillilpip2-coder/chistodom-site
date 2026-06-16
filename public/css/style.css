@@ -123,6 +123,15 @@ select.form__input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:/
 /* SCROLL MARGIN */
 [id]{scroll-margin-top:80px}
 
+/* DRONE */
+.drone{position:fixed;width:100px;height:70px;pointer-events:none;z-index:9998;opacity:0;transition:opacity .4s;transform:translate(-50%,-50%);filter:drop-shadow(0 8px 16px rgba(0,0,0,.25))}
+.drone.visible{opacity:1}
+.drone__prop{transform-origin:center;animation:propSpin .08s linear infinite}
+.drone__prop--tr{animation-direction:reverse}
+.drone__spray{animation:sprayPulse 1.5s ease-in-out infinite}
+@keyframes propSpin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+@keyframes sprayPulse{0%,100%{opacity:.6}50%{opacity:1}}
+
 /* REDUCED MOTION */
 @media(prefers-reduced-motion:reduce){
   .hero,.why,.process,.services,.contact,.footer{animation:none !important;transition-duration:0.01ms !important}

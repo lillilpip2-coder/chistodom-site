@@ -192,6 +192,41 @@
 
 <div class="toast" id="toast"></div>
 
+<div class="drone" id="drone">
+  <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+    <!-- Propellers -->
+    <g class="drone__prop drone__prop--tl">
+      <ellipse cx="25" cy="15" rx="18" ry="4" fill="rgba(0,0,0,.15)"/>
+      <circle cx="25" cy="15" r="3" fill="#555"/>
+    </g>
+    <g class="drone__prop drone__prop--tr">
+      <ellipse cx="95" cy="15" rx="18" ry="4" fill="rgba(0,0,0,.15)"/>
+      <circle cx="95" cy="15" r="3" fill="#555"/>
+    </g>
+    <!-- Arms -->
+    <line x1="25" y1="15" x2="45" y2="35" stroke="#333" stroke-width="2.5"/>
+    <line x1="95" y1="15" x2="75" y2="35" stroke="#333" stroke-width="2.5"/>
+    <!-- Body -->
+    <rect x="40" y="28" width="40" height="22" rx="6" fill="#2c7be5"/>
+    <rect x="44" y="32" width="32" height="14" rx="3" fill="#1a5bb5"/>
+    <!-- Camera / lens -->
+    <circle cx="60" cy="46" r="4" fill="#111"/>
+    <circle cx="60" cy="46" r="2" fill="#4fc3f7"/>
+    <!-- Cleaning pads -->
+    <rect x="38" y="50" width="14" height="6" rx="2" fill="#aaa"/>
+    <rect x="68" y="50" width="14" height="6" rx="2" fill="#aaa"/>
+    <!-- Water spray -->
+    <g class="drone__spray">
+      <line x1="45" y1="56" x2="43" y2="68" stroke="#4fc3f7" stroke-width="1" opacity=".6"/>
+      <line x1="48" y1="56" x2="47" y2="70" stroke="#4fc3f7" stroke-width="1" opacity=".5"/>
+      <line x1="51" y1="56" x2="50" y2="66" stroke="#4fc3f7" stroke-width="1" opacity=".4"/>
+      <line x1="75" y1="56" x2="73" y2="68" stroke="#4fc3f7" stroke-width="1" opacity=".6"/>
+      <line x1="78" y1="56" x2="77" y2="70" stroke="#4fc3f7" stroke-width="1" opacity=".5"/>
+      <line x1="81" y1="56" x2="80" y2="66" stroke="#4fc3f7" stroke-width="1" opacity=".4"/>
+    </g>
+  </svg>
+</div>
+
 <script src="js/main.js"></script>
 </body>
 </html>
