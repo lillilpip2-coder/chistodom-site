@@ -124,12 +124,12 @@ select.form__input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:/
 [id]{scroll-margin-top:80px}
 
 /* DRONE */
-.drone{position:fixed;width:100px;height:70px;pointer-events:none;z-index:9998;opacity:0;transition:opacity .4s;transform:translate(-50%,-50%);filter:drop-shadow(0 8px 16px rgba(0,0,0,.25));animation-play-state:paused}
+.drone{position:fixed;width:140px;height:91px;pointer-events:none;z-index:9998;opacity:0;transition:opacity .4s;transform:translate(-50%,-50%);filter:drop-shadow(0 10px 20px rgba(0,0,0,.35));animation-play-state:paused}
 .drone.visible{opacity:1;animation-play-state:running}
 .drone.visible .drone__prop,.drone.visible .drone__spray{animation-play-state:running}
-.drone__prop{transform-origin:center;animation:propSpin .15s linear infinite;animation-play-state:paused}
+.drone__prop{transform-origin:center;animation:propSpin .12s linear infinite;animation-play-state:paused}
 .drone__prop--tr{animation-direction:reverse}
-.drone__spray{animation:sprayPulse 1.5s ease-in-out infinite;animation-play-state:paused}
+.drone__spray{animation:sprayPulse 1.8s ease-in-out infinite;animation-play-state:paused}
 @keyframes propSpin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 @keyframes sprayPulse{0%,100%{opacity:.6}50%{opacity:1}}
 
