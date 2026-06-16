@@ -133,17 +133,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const whiteSections = document.querySelectorAll('.services, .process, .why, .contact');
+    let whiteSectionCount = 0;
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          drone.classList.add('visible');
-          droneVisible = true;
-          if (!rafId) animateDrone();
-        } else {
-          drone.classList.remove('visible');
-          droneVisible = false;
-        }
+        whiteSectionCount += entry.isIntersecting ? 1 : -1;
+        whiteSectionCount = Math.max(0, whiteSectionCount);
       });
+      if (whiteSectionCount > 0) {
+        drone.classList.add('visible');
+        droneVisible = true;
+        if (!rafId) animateDrone();
+      } else {
+        drone.classList.remove('visible');
+        droneVisible = false;
+      }
     }, { threshold: 0.1 });
     whiteSections.forEach(s => observer.observe(s));
 
