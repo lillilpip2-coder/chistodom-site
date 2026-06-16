@@ -18,7 +18,7 @@ body{font-family:'Inter',sans-serif;color:#111;line-height:1.5;-webkit-font-smoo
 .burger.active span:last-child{bottom:50%;transform:rotate(-45deg)}
 
 /* HERO */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:url('../images/hero.jpg') center/cover no-repeat}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:url('../images/hero.webp') center/cover no-repeat;background-color:#1a1a2e}
 .hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.35)}
 .hero__content{position:relative;z-index:1}
 .hero__label{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.6);margin-bottom:24px}
