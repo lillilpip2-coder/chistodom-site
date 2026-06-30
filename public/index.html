@@ -5,17 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ЧистоДом — Мытьё фасадов частных домов</title>
 <meta name="description" content="Профессиональное мытьё фасадов частных домов. Атмосферная грязь, высолы, гидрофобизация.">
-<meta name="theme-color" content="#111111">
-<link rel="preload" as="image" href="images/hero.webp">
+<meta name="theme-color" content="#1a1a2e">
+<meta property="og:title" content="ЧистоДом — Мытьё фасадов частных домов">
+<meta property="og:description" content="Профессиональное мытьё фасадов. Атмосферная грязь, высолы, гидрофобизация. Любая высота.">
+<meta property="og:image" content="https://chistimdom7750.ru/images/hero-mobile.webp">
+<meta property="og:url" content="https://chistimdom7750.ru">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<link rel="canonical" href="https://chistimdom7750.ru">
 <link rel="icon" href="favicon.png" type="image/png">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#111;line-height:1.5;-webkit-font-smoothing:antialiased;background:#fff;min-height:100vh}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#111;line-height:1.5;background:#fff}
 .container{max-width:1120px;margin:0 auto;padding:0 24px}
-.header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,0,0,.4);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,0,0,.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
 .header__inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-size:20px;font-weight:800;text-decoration:none;color:#fff;letter-spacing:-.5px;display:flex;align-items:center;gap:8px}
+.logo{font-size:20px;font-weight:800;text-decoration:none;color:#fff;letter-spacing:-.5px}
 .nav{display:flex;align-items:center;gap:32px}
 .nav__link{text-decoration:none;color:rgba(255,255,255,.85);font-size:14px;font-weight:500}
 .nav__link--cta{background:#fff;color:#111;padding:8px 20px;border-radius:100px;font-weight:600}
@@ -23,26 +29,25 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Ar
 .burger span{position:absolute;left:0;width:100%;height:2px;background:#fff;transition:all .3s}
 .burger span:first-child{top:0}
 .burger span:last-child{bottom:0}
-.burger.active span:first-child{top:50%;transform:rotate(45deg)}
-.burger.active span:last-child{bottom:50%;transform:rotate(-45deg)}
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:url('images/hero.webp') center/cover no-repeat;background-color:#1a1a2e}
-.hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.35)}
-.hero__content{position:relative;z-index:1}
+.hero{position:relative;height:100vh;height:100dvh;overflow:hidden;background:#1a1a2e}
+.hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.hero__overlay{position:absolute;inset:0;background:rgba(0,0,0,.35);z-index:1}
+.hero__content{position:relative;z-index:2;display:flex;align-items:center;height:100%;padding-top:64px}
 .hero__label{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.6);margin-bottom:24px}
-.hero__title{font-size:clamp(56px,10vw,120px);font-weight:900;letter-spacing:-3px;line-height:.95;margin-bottom:32px;color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+.hero__title{font-size:clamp(48px,10vw,120px);font-weight:900;letter-spacing:-3px;line-height:.95;margin-bottom:32px;color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.5)}
 .hero__title em{font-style:italic;color:rgba(255,255,255,.6)}
 .hero__text{font-size:18px;color:rgba(255,255,255,.9);margin-bottom:48px;max-width:400px;line-height:1.7;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:all .2s;border-radius:100px;padding:14px 36px}
 .btn--light{background:#fff;color:#111}
 .btn--light:hover{background:#f0f0f0}
-.marquee{padding:20px 0;border-top:1px solid rgba(255,255,255,.3);border-bottom:1px solid rgba(255,255,255,.3);overflow:hidden;background:rgba(0,0,0,.4)}
-.marquee__track{display:flex;width:max-content;animation:scroll 30s linear infinite;will-change:transform;-webkit-animation:scroll 30s linear infinite}
-.marquee__track span{font-size:12px;font-weight:700;letter-spacing:4px;color:#fff;flex-shrink:0;text-transform:uppercase;padding:0 24px;white-space:nowrap}
-.marquee__dot{color:rgba(255,255,255,.4);font-size:6px;display:flex;align-items:center;flex-shrink:0;padding:0 8px;white-space:nowrap}
-@-webkit-keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.btn{display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:all .2s;border-radius:100px;padding:14px 36px}
 .btn--dark{background:#111;color:#fff}
+.btn--dark:hover{background:#333}
 .btn--full{width:100%;padding:16px;border-radius:12px}
+.marquee{padding:20px 0;border-top:1px solid rgba(255,255,255,.3);border-bottom:1px solid rgba(255,255,255,.3);overflow:hidden;background:rgba(0,0,0,.4)}
+.marquee__track{display:flex;width:max-content;animation:scroll 30s linear infinite}
+.marquee__track span{font-size:12px;font-weight:700;letter-spacing:4px;color:#fff;flex-shrink:0;text-transform:uppercase;padding:0 24px;white-space:nowrap}
+.marquee__dot{color:rgba(255,255,255,.4);font-size:6px;display:flex;align-items:center;flex-shrink:0;padding:0 8px}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .services{padding:100px 0;background:#fff}
 .section-title{font-size:36px;font-weight:800;letter-spacing:-1px;margin-bottom:48px}
 .services__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#e5e5e5}
@@ -82,44 +87,27 @@ select.form__input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:/
 .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(100px);background:#111;color:#fff;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;opacity:0;transition:all .4s cubic-bezier(.4,0,.2,1);z-index:9999}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 @media(max-width:900px){
-  .header{background:rgba(0,0,0,.6)}
-  .nav{display:none;position:absolute;top:64px;left:0;right:0;background:#111;flex-direction:column;padding:24px;gap:16px;border-bottom:1px solid #333}
-  .nav.open{display:flex}
-  .nav__link{color:rgba(255,255,255,.8)}
-  .nav__link--cta{color:#111}
-  .burger{display:block}
-  .hero__title{letter-spacing:-2px}
-  .services__grid{grid-template-columns:1fr}
-  .process__grid{grid-template-columns:1fr 1fr;gap:32px}
-  .why__grid{grid-template-columns:1fr}
-  .contact__inner{grid-template-columns:1fr;gap:48px}
-  .contact__title{font-size:36px}
-  .form__row{grid-template-columns:1fr}
-  .marquee__track{-webkit-animation:scroll 60s linear infinite;animation:scroll 60s linear infinite}
+.nav{display:none;position:absolute;top:64px;left:0;right:0;background:#111;flex-direction:column;padding:24px;gap:16px;border-bottom:1px solid #333}
+.nav.open{display:flex}
+.nav__link{color:rgba(255,255,255,.8)}
+.nav__link--cta{color:#111}
+.burger{display:block}
+.services__grid{grid-template-columns:1fr}
+.process__grid{grid-template-columns:1fr 1fr;gap:32px}
+.why__grid{grid-template-columns:1fr}
+.contact__inner{grid-template-columns:1fr;gap:48px}
+.contact__title{font-size:36px}
+.form__row{grid-template-columns:1fr}
+.marquee__track{animation-duration:60s}
 }
 @media(max-width:480px){
-  .hero__title{font-size:48px;letter-spacing:-1.5px}
-  .process__grid{grid-template-columns:1fr}
-  .section-title{font-size:32px;margin-bottom:40px}
+.hero__title{letter-spacing:-1.5px}
+.process__grid{grid-template-columns:1fr}
+.section-title{font-size:32px;margin-bottom:40px}
 }
 :focus-visible{outline:2px solid #111;outline-offset:2px}
-.btn:focus-visible{outline:2px solid #111;outline-offset:3px}
-.form__input:focus-visible{outline:none;border-color:#111}
-.nav__link:focus-visible{outline:2px solid #fff;outline-offset:4px;border-radius:4px}
 [id]{scroll-margin-top:80px}
-.drone{position:fixed;width:140px;height:91px;pointer-events:none;z-index:9998;opacity:0;transition:opacity .4s;transform:translate(-50%,-50%);filter:drop-shadow(0 10px 20px rgba(0,0,0,.35));animation-play-state:paused}
-.drone.visible{opacity:1;animation-play-state:running}
-.drone.visible .drone__prop,.drone.visible .drone__spray{animation-play-state:running}
-.drone__prop{transform-origin:center;animation:propSpin .12s linear infinite;animation-play-state:paused}
-.drone__prop--tr{animation-direction:reverse}
-.drone__spray{animation:sprayPulse 1.8s ease-in-out infinite;animation-play-state:paused}
-@keyframes propSpin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-@keyframes sprayPulse{0%,100%{opacity:.6}50%{opacity:1}}
-@media(prefers-reduced-motion:reduce){
-  .hero,.why,.process,.services,.contact,.footer{animation:none !important;transition-duration:0.01ms !important}
-  .drone{display:none}
-  html{scroll-behavior:auto}
-}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marquee__track{animation:none!important}}
 </style>
 </head>
 <body>
@@ -132,7 +120,7 @@ select.form__input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:/
       <a href="#process" class="nav__link">Как работаем</a>
       <a href="#contact" class="nav__link nav__link--cta">Оставить заявку</a>
     </nav>
-    <button class="burger" id="burger" aria-label="Меню">
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="nav">
       <span></span><span></span>
     </button>
   </div>
@@ -141,11 +129,19 @@ select.form__input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:/
 <main>
 
 <section class="hero">
+  <picture>
+    <source media="(max-width:480px)" srcset="images/hero-mobile.webp" type="image/webp">
+    <source srcset="images/hero-optimized.webp" type="image/webp">
+    <img class="hero__img" src="images/hero.webp" alt="Фасад чистого дома" width="1920" height="1080" loading="eager" decoding="async">
+  </picture>
+  <div class="hero__overlay"></div>
   <div class="container hero__content">
-    <p class="hero__label">Чистота без компромиссов</p>
-    <h1 class="hero__title">Мы делаем<br><em>идеально</em></h1>
-    <p class="hero__text">Атмосферная грязь, высолы, гидрофобизация.<br>Быстро. Чисто. Гарантия.</p>
-    <a href="#contact" class="btn btn--light">Обсудить проект</a>
+    <div>
+      <p class="hero__label">Чистота без компромиссов</p>
+      <h1 class="hero__title">Мы делаем<br><em>идеально</em></h1>
+      <p class="hero__text">Атмосферная грязь, высолы, гидрофобизация.<br>Быстро. Чисто. Гарантия.</p>
+      <a href="#contact" class="btn btn--light">Обсудить проект</a>
+    </div>
   </div>
 </section>
 
@@ -267,10 +263,7 @@ select.form__input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:/
           <span class="contact__link">Пн-Вс: круглосуточно</span>
         </div>
       </div>
-      <form class="form" id="contactForm" action="https://formsubmit.co/Vlad.bychkov.2025@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Новая заявка с сайта ЧистоДом">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://singular-lollipop-c36cb3.netlify.app/">
+      <form class="form" id="contactForm" action="/api/form" method="POST">
         <div class="form__row">
           <input type="text" name="name" class="form__input" placeholder="Ваше имя" required minlength="2" maxlength="100" autocomplete="name">
           <input type="tel" name="phone" class="form__input" placeholder="Телефон" required maxlength="18" autocomplete="tel" inputmode="tel">
@@ -299,76 +292,18 @@ select.form__input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http:/
 
 <div class="toast" id="toast"></div>
 
-<div class="drone" id="drone">
-  <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <radialGradient id="dBody" cx="50%" cy="40%"><stop offset="0%" stop-color="#4a5568"/><stop offset="100%" stop-color="#1a202c"/></radialGradient>
-      <radialGradient id="dTop" cx="50%" cy="35%"><stop offset="0%" stop-color="#5a6577"/><stop offset="100%" stop-color="#2d3748"/></radialGradient>
-      <linearGradient id="dArm" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4a5568"/><stop offset="100%" stop-color="#2d3748"/></linearGradient>
-      <linearGradient id="dLeg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#555"/><stop offset="100%" stop-color="#333"/></linearGradient>
-      <radialGradient id="dMotor" cx="50%" cy="30%"><stop offset="0%" stop-color="#718096"/><stop offset="100%" stop-color="#2d3748"/></radialGradient>
-      <filter id="dBright" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="6"/></filter>
-    </defs>
-    <g filter="url(#dBright)"><circle cx="35" cy="18" r="22" fill="rgba(0,0,0,.10)"/><circle cx="165" cy="18" r="22" fill="rgba(0,0,0,.10)"/></g>
-    <line x1="58" y1="68" x2="48" y2="92" stroke="url(#dLeg)" stroke-width="3" stroke-linecap="round"/>
-    <line x1="142" y1="68" x2="152" y2="92" stroke="url(#dLeg)" stroke-width="3" stroke-linecap="round"/>
-    <line x1="44" y1="92" x2="56" y2="92" stroke="#444" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="148" y1="92" x2="160" y2="92" stroke="#444" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="35" y1="18" x2="68" y2="42" stroke="url(#dArm)" stroke-width="5" stroke-linecap="round"/>
-    <line x1="165" y1="18" x2="132" y2="42" stroke="url(#dArm)" stroke-width="5" stroke-linecap="round"/>
-    <circle cx="35" cy="18" r="6" fill="url(#dMotor)" stroke="#555" stroke-width="1"/>
-    <circle cx="165" cy="18" r="6" fill="url(#dMotor)" stroke="#555" stroke-width="1"/>
-    <circle cx="35" cy="18" r="2.5" fill="#333"/>
-    <circle cx="165" cy="18" r="2.5" fill="#333"/>
-    <g class="drone__prop drone__prop--tl"><ellipse cx="35" cy="18" rx="24" ry="3.5" fill="rgba(60,60,60,.35)"/><line x1="11" y1="18" x2="59" y2="18" stroke="rgba(80,80,80,.25)" stroke-width="1.5"/></g>
-    <g class="drone__prop drone__prop--tr"><ellipse cx="165" cy="18" rx="24" ry="3.5" fill="rgba(60,60,60,.35)"/><line x1="141" y1="18" x2="189" y2="18" stroke="rgba(80,80,80,.25)" stroke-width="1.5"/></g>
-    <ellipse cx="100" cy="70" rx="32" ry="4" fill="rgba(0,0,0,.12)"/>
-    <rect x="68" y="36" width="64" height="30" rx="8" fill="url(#dBody)" stroke="#555" stroke-width=".5"/>
-    <rect x="74" y="38" width="52" height="10" rx="5" fill="url(#dTop)" stroke="#666" stroke-width=".3"/>
-    <circle cx="82" cy="43" r="1.5" fill="#48bb78"/><circle cx="88" cy="43" r="1.5" fill="#48bb78"/><circle cx="94" cy="43" r="1.5" fill="#48bb78"/><circle cx="100" cy="43" r="1.5" fill="#ecc94b"/>
-    <line x1="110" y1="40" x2="110" y2="46" stroke="#555" stroke-width=".7"/><line x1="113" y1="40" x2="113" y2="46" stroke="#555" stroke-width=".7"/><line x1="116" y1="40" x2="116" y2="46" stroke="#555" stroke-width=".7"/><line x1="119" y1="40" x2="119" y2="46" stroke="#555" stroke-width=".7"/>
-    <rect x="68" y="50" width="64" height="3" rx="1" fill="#e53e3e" opacity=".8"/>
-    <rect x="68" y="54" width="64" height="1.5" rx=".75" fill="#c53030" opacity=".5"/>
-    <rect x="72" y="56" width="56" height="10" rx="4" fill="#1a202c" stroke="#444" stroke-width=".3"/>
-    <rect x="92" y="66" width="16" height="6" rx="2" fill="#2d3748" stroke="#555" stroke-width=".3"/>
-    <rect x="94" y="72" width="12" height="10" rx="3" fill="#1a1a2e" stroke="#555" stroke-width=".5"/>
-    <circle cx="100" cy="77" r="4" fill="#111" stroke="#666" stroke-width=".5"/>
-    <circle cx="100" cy="77" r="2.5" fill="#0d1117"/><circle cx="100" cy="77" r="1.8" fill="#1a365d"/>
-    <circle cx="99" cy="76" r=".8" fill="rgba(255,255,255,.35)"/>
-    <rect x="70" y="62" width="5" height="4" rx="1" fill="#718096"/>
-    <rect x="125" y="62" width="5" height="4" rx="1" fill="#718096"/>
-    <g class="drone__spray">
-      <circle cx="72" cy="72" r="1" fill="#63b3ed" opacity=".5"/><circle cx="74" cy="76" r="1.2" fill="#63b3ed" opacity=".4"/><circle cx="71" cy="80" r=".8" fill="#63b3ed" opacity=".3"/><circle cx="73" cy="84" r="1" fill="#63b3ed" opacity=".25"/><circle cx="75" cy="88" r=".7" fill="#63b3ed" opacity=".2"/>
-      <circle cx="127" cy="72" r="1" fill="#63b3ed" opacity=".5"/><circle cx="129" cy="76" r="1.2" fill="#63b3ed" opacity=".4"/><circle cx="126" cy="80" r=".8" fill="#63b3ed" opacity=".3"/><circle cx="128" cy="84" r="1" fill="#63b3ed" opacity=".25"/><circle cx="130" cy="88" r=".7" fill="#63b3ed" opacity=".2"/>
-      <line x1="72" y1="66" x2="70" y2="82" stroke="#63b3ed" stroke-width=".6" opacity=".3"/><line x1="74" y1="66" x2="75" y2="86" stroke="#63b3ed" stroke-width=".6" opacity=".25"/>
-      <line x1="128" y1="66" x2="130" y2="82" stroke="#63b3ed" stroke-width=".6" opacity=".3"/><line x1="126" y1="66" x2="125" y2="86" stroke="#63b3ed" stroke-width=".6" opacity=".25"/>
-    </g>
-    <circle cx="72" cy="58" r="1.5" fill="#48bb78" opacity=".9"/><circle cx="128" cy="58" r="1.5" fill="#e53e3e" opacity=".9"/>
-    <circle cx="72" cy="58" r="3" fill="#48bb78" filter="url(#dBright)" opacity=".3"/><circle cx="128" cy="58" r="3" fill="#e53e3e" filter="url(#dBright)" opacity=".3"/>
-  </svg>
-</div>
-
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
 const b=document.getElementById('burger'),n=document.getElementById('nav'),f=document.getElementById('contactForm'),t=document.getElementById('toast');
 let tt=null,is=false;
 function toast(m){if(tt)clearTimeout(tt);t.textContent=m;t.classList.add('show');tt=setTimeout(()=>t.classList.remove('show'),4e3)}
-b.addEventListener('click',()=>{b.classList.toggle('active');n.classList.toggle('open')});
-n.querySelectorAll('.nav__link').forEach(l=>l.addEventListener('click',()=>{b.classList.remove('active');n.classList.remove('open')}));
-document.addEventListener('click',e=>{if(!n.contains(e.target)&&!b.contains(e.target)){b.classList.remove('active');n.classList.remove('open')}});
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const h=a.getAttribute('href');if(!h||h==='#')return;const el=document.querySelector(h);if(el){const o=72,t=el.getBoundingClientRect().top+window.scrollY-o;window.scrollTo({top:t,behavior:'smooth'})}})});
-if(f){f.addEventListener('submit',e=>{if(is)return;const d=Object.fromEntries(new FormData(f));if(!d.name||d.name.trim().length<2){e.preventDefault();toast('Введите имя (минимум 2 символа)');return}if(!d.phone||d.phone.replace(/\D/g,'').length<10){e.preventDefault();toast('Введите корректный номер телефона');return}is=true;const s=f.querySelector('button[type="submit"]');s.textContent='Отправка...';s.disabled=true;toast('Заявка отправлена! Мы свяжемся с вами в ближайшее время.')})}
-const p=f?.querySelector('input[type="tel"]');
+b&&b.addEventListener('click',()=>{const o=b.classList.toggle('active');n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+n&&n.querySelectorAll('.nav__link').forEach(l=>l.addEventListener('click',()=>{b&&b.classList.remove('active');n.classList.remove('open');b&&b.setAttribute('aria-expanded','false')}));
+document.addEventListener('click',e=>{if(n&&!n.contains(e.target)&&b&&!b.contains(e.target)){b.classList.remove('active');n.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const h=a.getAttribute('href');if(!h||h==='#')return;const el=document.querySelector(h);if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-72,behavior:'smooth'})})});
+if(f){f.addEventListener('submit',async e=>{e.preventDefault();if(is)return;const d=Object.fromEntries(new FormData(f));if(!d.name||d.name.trim().length<2){toast('Введите имя (минимум 2 символа)');return}if(!d.phone||d.phone.replace(/\D/g,'').length<10){toast('Введите корректный номер телефона');return}is=true;const s=f.querySelector('button[type="submit"]');s.textContent='Отправка...';s.disabled=true;try{const r=await fetch('/api/form',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});const j=await r.json();if(j.ok){toast('Заявка отправлена! Мы свяжемся с вами.');f.reset()}else{toast(j.error||'Ошибка отправки')}is=false;s.textContent='Отправить заявку';s.disabled=false}catch(er){toast('Ошибка сети');is=false;s.textContent='Отправить заявку';s.disabled=false}})}
+const p=f&&f.querySelector('input[type="tel"]');
 if(p){p.addEventListener('input',e=>{const sel=e.target.selectionStart,db=e.target.value.slice(0,sel).replace(/\D/g,'').length;let d=e.target.value.replace(/\D/g,'');if(!d){e.target.value='';return}if(d[0]==='8')d='7'+d.slice(1);if(d[0]!=='7')d='7'+d;d=d.slice(0,11);let v='+7';if(d.length>1)v+=' ('+d.slice(1,4);if(d.length>4)v+=') '+d.slice(4,7);if(d.length>7)v+='-'+d.slice(7,9);if(d.length>9)v+='-'+d.slice(9,11);e.target.value=v;let pos=0;for(let i=0,dc=0;i<v.length&&dc<db;i++){if(/\d/.test(v[i]))dc++;pos=i+1}e.target.setSelectionRange(pos,pos)});p.addEventListener('keydown',e=>{if(e.key==='Backspace'&&e.target.value==='+7 (')e.target.value=''})}
-const dr=document.getElementById('drone');
-if(dr){let mx=window.innerWidth/2,my=window.innerHeight/2,dx=mx,dy=my;const e=.08;let dv=false,ri=null;
-document.addEventListener('mousemove',ev=>{mx=ev.clientX;my=ev.clientY});
-function anim(){if(!dv){ri=null;return}dx+=(mx-dx)*e;dy+=(my-dy)*e;dr.style.left=dx+'px';dr.style.top=dy+'px';ri=requestAnimationFrame(anim)}
-const ws=document.querySelectorAll('.services,.process,.why,.contact');let wc=0;
-const ob=new IntersectionObserver(es=>{es.forEach(en=>{wc+=en.isIntersecting?1:-1;wc=Math.max(0,wc)});if(wc>0){dr.classList.add('visible');dv=true;if(!ri)anim()}else{dr.classList.remove('visible');dv=false}},{threshold:.1});
-ws.forEach(s=>ob.observe(s));
-const h=document.querySelector('.hero');if(h){const ho=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){dr.classList.remove('visible');dv=false}})},{threshold:.5});ho.observe(h)}
-const ft=document.querySelector('.footer');if(ft){const fo=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){dr.classList.remove('visible');dv=false}})},{threshold:.1});fo.observe(ft)}}
 });
 </script>
 </body>
